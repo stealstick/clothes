@@ -1,0 +1,61 @@
+
+.categorybox{
+	color: #2196F3;
+	text-align: center;
+	font-size: 54px;
+}
+.realtime-goods{
+	margin-top: 10%;
+}
+.realtime-goods-title{
+	font-size : 28px;
+	font-weight: 900;
+	width : auto;
+}
+.realtime-sort{
+	padding-top: 10px;
+}
+
+.goods-item{
+	border-top-style: solid;
+	border-color: #bbb;
+	border-width: 1px;
+	padding-top: 20px;
+
+	padding-bottom: 20px;
+
+}
+.goods-item-img{
+	width:100%;
+}
+.realtime-goods-items{
+	margin-top:3%;
+}
+.item-bo{
+	font-size: 10px;
+	color:#666;
+	margin : 0;
+}
+.item-status{
+	font-size: 10px;
+	color:#000;
+}
+.item-level{
+	color: #8BC34A;
+}
+.item-boji{
+	font-size: 16px;
+	font-weight: 900;
+	color:#42A5F5;
+}
+.item-desc{
+	font-size: 12px;
+	color:#333;
+}
+.logo{
+	color: #2196F3;
+	font-size: 32px;
+}
+.search-item{
+	margin:10px;
+}
