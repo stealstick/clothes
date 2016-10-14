@@ -1,34 +1,8 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+{% extends "main/layout.html" %}
+{% load staticfiles %}
+{% block content %}
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="https://use.fontawesome.com/465a49e338.js"></script>
-	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/index.css">
-</head>
-<body>
-	<div class="header">
-		<nav class="navbar navbar-default">
-			<div class="container-fluid custom-nav">
-				<div class="navbar-header">
-					<a class="navbar-brand nav-font" href="#">WebSiteName</a>
-				</div>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-				</ul>
-				
-			</div>
-		</nav>
-	</div><!-- header end -->
 	<div class="mainbox">
 		<div class="container">
 			<div class="row">
@@ -83,7 +57,7 @@
 						<div class = "row realtime-goods-items">
 							<div class="row">
 								<div class="col-md-3 goods-item">
-									<img class="goods-item-img" src="img/cloth1.jpg">
+									<img class="goods-item-img" src="{% static 'main/img/cloth1.jpg' %}">
 									<div class="col-md-12 no-padding">
 										<p class="item-status">상태  <span class="item-level">A+</span></p>
 										<p  class = "item-desc">
@@ -94,7 +68,7 @@
 									</div>
 								</div>
 								<div class="col-md-3 goods-item">
-									<img class="goods-item-img" src="img/cloth1.jpg">
+									<img class="goods-item-img" src="{% static 'main/img/cloth1.jpg' %}">
 									<div class="col-md-12 no-padding">
 										<p class="item-status">상태  <span class="item-level">A+</span></p>
 										<p  class = "item-desc">
@@ -105,7 +79,7 @@
 									</div>
 								</div>
 								<div class="col-md-3 goods-item">
-									<img class="goods-item-img" src="img/cloth1.jpg">
+									<img class="goods-item-img" src="{% static 'main/img/cloth1.jpg' %}">
 									<div class="col-md-12 no-padding">
 										<p class="item-status">상태  <span class="item-level">A+</span></p>
 										<p  class = "item-desc">
@@ -116,7 +90,7 @@
 									</div>
 								</div>
 								<div class="col-md-3 goods-item">
-									<img class="goods-item-img" src="img/cloth1.jpg">
+									<img class="goods-item-img" src="{% static 'main/img/cloth1.jpg' %}">
 									<div class="col-md-12 no-padding">
 										<p class="item-status">상태  <span class="item-level">A+</span></p>
 										<p  class = "item-desc">
@@ -127,7 +101,7 @@
 									</div>
 								</div>
 								<div class="col-md-3 goods-item">
-									<img class="goods-item-img" src="img/cloth1.jpg">
+									<img class="goods-item-img" src="{% static 'main/img/cloth1.jpg' %}">
 									<div class="col-md-12 no-padding">
 										<p class="item-status">상태  <span class="item-level">A+</span></p>
 										<p  class = "item-desc">
@@ -147,16 +121,4 @@
 			</div>
 		</div>
 	</div>
-	<div class="footer">
-		<nav class="navbar navbar-default navbar-static-bottom">
-			<div class="container-fluid custom-nav">
-				<div class="navbar-header">
-					<a class="navbar-brand nav-font">Closeup</a>
-				</div>
-
-			</div>
-		</nav>
-	</div><!-- header end --> 
-
-</body>
-</html>
+	{% endblock %}
