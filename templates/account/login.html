@@ -2,6 +2,8 @@
 
 {% block content %}
 
+
+
 <div class="mainbox">
     <div class="container">
         <div class="row">
@@ -20,28 +22,41 @@
 
 
                         <div class="col-md-12 ">
-                            <form action = "login/" method = "post">
+                            <form method="post" action="{% url 'login' %}">
                                 {% csrf_token %}
 
                                 <div class="input-group loginboxtext">
                                     <span class="input-group-addon" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" placeholder="id" name="userid" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" placeholder="id" name="username" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group loginboxtext">
                                     <span class="input-group-addon" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" placeholder="Password" name = "userpw" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" placeholder="Password" name = "password" aria-describedby="basic-addon1">
                                 </div>
 
-                        </div>
-
-
-
-                        <div class="row">
-                            <div class="col-md-12 loginboxbtnbox">
-                                <input type="submit" class="btn loginbox-login" value="Login">
-                                <input type="button" class="btn loginbox-signup" value="Sign up">
                             </div>
-                        </div>
+
+
+
+                            <div class="row">
+                                <div class="col-md-12 loginboxbtnbox">
+                                    {% if form.errors %}
+                                    <p>ID나 비밀번호가 일치하지 않습니다.</p>
+                                    {% endif %}
+                                    {% if next %}
+                                    {% if user.is_authenticated %}
+                                    <p>권한이 없는 페이지에 접근하였으니, 권한이 있는 계정으로 로그인하세요.</p>
+                                    {% else %}
+                                    <p>이 페이지를 보려면 로그인을 해야 합니다.</p>
+                                    {% endif %}
+                                    {% endif %}
+                                    
+
+                                    <input type="submit" class="btn loginbox-login" value="Login">
+                                    <input type="button" class="btn loginbox-signup" value="Sign up">
+                                    <input type="hidden" name="next" value="{{ next }}" />
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>

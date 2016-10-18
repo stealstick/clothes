@@ -14,9 +14,25 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.http import HttpResponseRedirect
 
 urlpatterns = [
     url(r'^', include('main.urls')),
     url(r'^account/', include('account.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(
+        r'^accounts/login/',
+        'django.contrib.auth.views.login',
+        name='login',
+        kwargs={
+            'template_name': 'account/login.html'
+        }
+    ),
+    url(
+        r'^accounts/logout/',
+        'django.contrib.auth.views.logout',
+        kwargs={
+            'template_name': 'main/index.html'
+        }
+    ),
 ]
