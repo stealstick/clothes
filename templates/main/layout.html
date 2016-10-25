@@ -1,45 +1,90 @@
 {% load staticfiles %}
-<!doctype html>
+
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<!--Import Google Icon Font-->
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/465a49e338.js"></script>
-        <link rel ="stylesheet" href="{% static 'main/css/base.css' %}" />
-    <link rel ="stylesheet" href="{% static 'main/css/index.css' %}" />
+	<link rel ="stylesheet" href="{% static 'main/css/base.css' %}" />
+	<link rel ="stylesheet" href="{% static 'main/css/main.css' %}" />
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
 </head>
-<body>
-    <div class="header">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid custom-nav">
-                <div class="navbar-header">
-                    <a class="navbar-brand nav-font" href="#">Clothup</a>
-                </div>
-                {% if request.user.is_authenticated %}
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/accounts/profile"><span class="glyphicon glyphicon-user"></span> {{ request.user.username }}</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/accounts/logout"><span class="glyphicon glyphicon-logout"></span> Logout</a></li>
-                </ul>
-                {% else %}<ul class="nav navbar-nav navbar-right">
-                    <li><a href="/account/signup/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="/accounts/login/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                </ul>
-                {% endif %}
-            </div>
-        </nav>
-    </div><!-- header end -->
 
-    
-    {% block content %}{% endblock %}
-    </body>
-    </html>
+<body>
+	<nav class="custom-nav">
+		<div class="nav-wrapper nav-color">
+			<a href="#" class="brand-logo center nav-logo"><img src="{% static 'main/img/clothup-logo.png' %}" width="120px;"></a>
+			<ul id="nav-mobile" class="left hide-on-med-and-down nav-search">
+        <li><input type="text" class ="main-search" name="" /></li>
+        <li><button type="submit" class="search-icon"><i class="material-icons search-icon">search</i></button></li>
+      </ul>
+			<ul id="nav-mobile" class="right nav-account hide-on-med-and-down">
+				<li><a class = "red-text text-darken-2" href="/account/signup">SIGNUP</a></li>
+				<li><a class = "red-text text-darken-2" href="/account/login">LOGIN</a></li>
+				<!--  <input type="text" name=""> -->
+			</ul>
+		</div>
+	</nav>
+	<div class = "container">
+		<div class="row content">
+			<div class="col l2">
+				<div class="stuck-left">
+					<div class="collection ">
+						<a href="#!" class="collection-item">아우터</a>
+						<a href="#!" class="collection-item ">셔츠/블라우스</a>
+						<a href="#!" class="collection-item">교복</a>
+						<a href="#!" class="collection-item">상의</a>
+						<a href="#!" class="collection-item">하의</a>
+						<a href="#!" class="collection-item">원피스</a>
+						<a href="#!" class="collection-item">신발</a>
+						<a href="#!" class="collection-item">가방</a>
+
+					</div>
+					<div class="card ">
+						<div class="card-content">
+							<span class="card-title">거래랭킹</span>
+							<p><img src="{% static 'main/img/GOLd.png' %}" width="15px">1. stealstick</p>
+							<p><img src="{% static 'main/img/SILVER.png' %}" width="15px">2. stillstick</p>
+							<p><img src="{% static 'main/img/BRONZE.png' %}" width="15px">3. admin</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col l7">
+				<div class="row">
+					
+					<div class="col l12">
+						{% block content %}{% endblock %}
+					</div>
+
+				</div>
+			</div>
+			<div class="col l3">
+				<div class="row">
+					{% block rightside %}{% endblock %}
+				</div>
+			</div>
+		</div>
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script> $(document).ready(function(){
+			$('ul.tabs').tabs('select_tab', 'tab_id');
+		});
+
+	</script>
+</body>
+</html>

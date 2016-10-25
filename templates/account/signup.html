@@ -1,77 +1,43 @@
 {% extends "account/layout.html" %}
 
 {% block content %}
-
-	<div class="mainbox">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4"></div>
-				<div class="col-md-4 ">
-					<div class="loginbox">
-						<div class="row">
-							<div class="col-md-2"></div>
-							
-							<div class="col-md-8 loginboxtitle">
-								Clothup
-							</div>
-							<div class="col-md-2"></div>
-						</div>
-						<div class="row">
-							
-
-							<div class="col-md-12 ">
-								<div class="input-group loginboxtext">
-									<span class="input-group-addon" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" placeholder="홍길동" aria-describedby="basic-addon1">
-								</div>
-								<div class="input-group loginboxtext">
-									<span class="input-group-addon" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" placeholder="ID" aria-describedby="basic-addon1">
-								</div>
-								<div class="input-group loginboxtext">
-									<span class="input-group-addon" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
-								</div>
-								<div class="input-group loginboxtext">
-									<span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" placeholder="sample@gmail.com" aria-describedby="basic-addon1">
-								</div>
-								<div class="row">
-									<div class="col-md-5">
-										<label for="sel1"></label>
-										<select class="form-control" id="sel1">
-											<option>시/도</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-										</select>
-									</div>
-									<div class="col-md-7">
-										<label for="sel1"></label>
-										<select class="form-control" id="sel1">
-											<option>군/구</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-										</select>
-										
-									</div>
-									
-								</div>
-							</div>
-							
-							
-
-							<div class="row">
-								<div class="col-md-12 loginboxbtnbox">
-									
-									<input type="button" class="btn loginbox-signup" value="Sign up">
-								</div>
-							</div>
-						</div>
+<div class="title">
+	SHOP!N
+	<p class="sub">당신을 위한 모든 쇼핑!</p>
+</div>
+<div class="card">
+	<div class="card-content signin-box">
+		<h1 class="signin-title center-align">SIGN IN</h1>
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field col l12">
+						<i class="material-icons prefix">perm_identity</i>
+						<input id="icon_prefix" type="text" class="validate">
+						<label for="icon_prefix">ID</label>
 					</div>
-					<div class="col-md-4"></div>
+					<div class="input-field col l12">
+						<i class="material-icons prefix">perm_identity</i>
+						<input id="icon_prefix" type="text" class="validate">
+						<label for="icon_prefix">ID</label>
+					</div>
+					<div class="input-field col l12">
+						<i class="material-icons prefix">vpn_key</i>
+						<input id="icon_telephone" type="tel" class="validate">
+						<label for="icon_telephone">Password</label>
+					</div>
+					<div class="input-field col l12">
+						<i class="material-icons prefix">vpn_key</i>
+						<input id="icon_telephone" type="tel" class="validate">
+						<label for="icon_telephone">Password</label>
+					</div>
 				</div>
-			</div>
-		</div> 
+				<button type="submit" class="waves-effect waves-light btn-large singin-button">SIGN UP</button>
+			</form>
+		</div>
+	</div>
+	
+
+</div>
+
 {% endblock %}

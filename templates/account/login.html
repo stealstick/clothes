@@ -1,68 +1,35 @@
 {% extends "account/layout.html" %}
 
 {% block content %}
-
-
-
-<div class="mainbox">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 ">
-                <div class="loginbox">
-                    <div class="row">
-                        <div class="col-md-2"></div>
-
-                        <div class="col-md-8 loginboxtitle">
-                            Clothup
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                    <div class="row">
-
-
-                        <div class="col-md-12 ">
-                            <form method="post" action="{% url 'login' %}">
-                                {% csrf_token %}
-
-                                <div class="input-group loginboxtext">
-                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" placeholder="id" name="username" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group loginboxtext">
-                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-key" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" placeholder="Password" name = "password" aria-describedby="basic-addon1">
-                                </div>
-
-                            </div>
-
-
-
-                            <div class="row">
-                                <div class="col-md-12 loginboxbtnbox">
-                                    {% if form.errors %}
-                                    <p>ID나 비밀번호가 일치하지 않습니다.</p>
-                                    {% endif %}
-                                    {% if next %}
-                                    {% if user.is_authenticated %}
-                                    <p>권한이 없는 페이지에 접근하였으니, 권한이 있는 계정으로 로그인하세요.</p>
-                                    {% else %}
-                                    <p>이 페이지를 보려면 로그인을 해야 합니다.</p>
-                                    {% endif %}
-                                    {% endif %}
-                                    
-
-                                    <input type="submit" class="btn loginbox-login" value="Login">
-                                    <input type="button" class="btn loginbox-signup" value="Sign up">
-                                    <input type="hidden" name="next" value="{{ next }}" />
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-4"></div>
+<div class="title">
+	SHOP!N
+	<p class="sub">당신을 위한 모든 쇼핑!</p>
+</div>
+<div class="card">
+	<div class="card-content signin-box">
+		<h1 class="signin-title center-align">SIGN IN</h1>
+		<div class="row">
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field col l12">
+						<i class="material-icons prefix">perm_identity</i>
+						<input id="icon_prefix" type="text" class="validate">
+						<label for="icon_prefix">ID</label>
+					</div>
+					<div class="input-field col l12">
+						<i class="material-icons prefix">vpn_key</i>
+						<input id="icon_telephone" type="tel" class="validate">
+						<label for="icon_telephone">Password</label>
+					</div>
+				</div>
+				<button type="submit" class="waves-effect waves-light btn-large singin-button">SIGN IN</button>
+			</form>
+		</div>
+	</div>
+	<div class="card-action">
+              <p class="dont center-align">Don't have an account?<a class = "creatonenow">Creat one now</a></p>
             </div>
-        </div>
-    </div> 
 
-    {% endblock %}
+</div>
+
+{% endblock %}

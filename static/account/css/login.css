@@ -1,38 +1,52 @@
-.loginbox{
-	margin-top: 10%;
-	border-radius: 8px;
-	text-align: center;
-	background-color: #2196F3;
-	padding: 10%;
-	padding-top: 10%;
-	padding-bottom: 15%;
-	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+html{
+	color: #bcc9c6;
 }
-.loginboxtitle{
-	color:white;
-	font-size: 50px;
-	padding-top:8%;
-	padding-bottom:4%;
+.signin-title{
+	font-size: 30px;
+	color: #263d48;
+	font-weight: 500;
 }
-.loginboxtext{
-	margin-top:6%;
+
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #21c9a6;
+    box-shadow: 0 1px 0 0 #21c9a6;
 }
-.loginboxbtnbox{
-	margin-top:8%;
-}
-.loginbox-login{
-	margin-top: 4%;
-	width:90%;
-	height: 40px;
-	border-radius: 5px;
-	color: #0D47A1;
-	background-color: #fff;
-}
-.loginbox-signup{
-	margin-top: 4%;
-	width:90%;
-	height: 40px;
-	border-radius: 5px;
-	background-color: #0D47A1;
+.title{
+	margin-top: 15%;
+	font-size: 84px;
 	color: #fff;
+	text-align: center;
+	font-weight: 200;
+	line-height: 60px;
+}
+.title > .sub{
+	font-size: 25px;
+	color: #fff;
+	font-weight: 400;
+	margin-top : 0;
+}
+.input-field .prefix.active {
+    color: #21c9a6;
+}
+.singin-button{
+	background-color: #21c9a6;
+	width: 100%;
+}
+.card .card-content {
+    padding: 40px;
+    border-radius: 0 0 2px 2px;
+    border-top: 7px solid #21c9a6;
+}
+.input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content {
+    margin-left: 0rem;
+    width: 92%;
+    width: calc(100% - 3rem);
+    padding-left :3rem;
+}
+.creatonenow
+{
+	color: #23c9a6 !important;
+	text-decoration: underline;
+	    text-transform: none !important;
+}
 }
