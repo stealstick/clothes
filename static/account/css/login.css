@@ -1,52 +1,41 @@
 html{
-	color: #bcc9c6;
+	color: #ef9a9a;
 }
-.signin-title{
-	font-size: 30px;
-	color: #263d48;
-	font-weight: 500;
+.login-box{
+	border-style: solid;
+	border-color : #e83b11;
+}
+.cut-line{
+	color:#e83b11;
+	font-size: 34px;
+	border-right-style: solid;
+	border-right-color: #c2c2c2; 
+}
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #e83b11;
+    box-shadow: 0 1px 0 0 #e83b11;
 }
 
-input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #21c9a6;
-    box-shadow: 0 1px 0 0 #21c9a6;
+
+.input-field .prefix.active{
+	color: #e83b11;
 }
-.title{
-	margin-top: 15%;
-	font-size: 84px;
-	color: #fff;
-	text-align: center;
-	font-weight: 200;
-	line-height: 60px;
+
+input[type=text]:focus:not([readonly])+label{
+	color : #e83b11;
 }
-.title > .sub{
-	font-size: 25px;
-	color: #fff;
-	font-weight: 400;
-	margin-top : 0;
+input[type=tel]:focus:not([readonly])+label{
+	color: #e83b11;
 }
-.input-field .prefix.active {
-    color: #21c9a6;
+.login-button{
+	background-color: #e83b11;
 }
-.singin-button{
-	background-color: #21c9a6;
-	width: 100%;
+.login-button:hover{
+	background-color: #ef9a9a;
 }
-.card .card-content {
-    padding: 40px;
-    border-radius: 0 0 2px 2px;
-    border-top: 7px solid #21c9a6;
+.login-layout{
+	margin-top: 10%;
 }
-.input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content {
-    margin-left: 0rem;
-    width: 92%;
-    width: calc(100% - 3rem);
-    padding-left :3rem;
-}
-.creatonenow
-{
-	color: #23c9a6 !important;
-	text-decoration: underline;
-	    text-transform: none !important;
-}
+.join-layout{
+	margin-top: 5%;
 }
