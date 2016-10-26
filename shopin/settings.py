@@ -84,6 +84,8 @@ DATABASES = {
 }
 
 
+AUTH_USER_MODEL = 'account.User'
+LOGIN_REDIRECT_URL = '/'
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
