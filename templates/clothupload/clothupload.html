@@ -1,1 +1,211 @@
-clothupload.html
+{% extends "clothupload/layout.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="row clothupload-layout">
+	<div class="col s12 m12">
+		<span class="cut-line">옷 정보&nbsp;</span>
+		<div class="card">
+			<div class="card-content">
+				<span class="clothupload-infotxt">
+					옷 사진올리기
+				</span>
+				<div class="row">
+					<div class="col s12 m4">
+						<div class="valign-wrapper image-upload">
+							<button class="valign image-upload-btn">+</button>
+						</div>
+					</div>
+					<div class="col s12 m8">
+						<div class="row nomargin">
+							<div class="col s12 m3">
+								<span class="product-info">
+									제품이름
+								</span>
+							</div>
+							<div class="col s12 m8">
+								<input type="text" id="product-name">
+							</div>
+							<div class="col s12 m1">
+							</div>
+						</div>
+						<div class="row nomargin">
+							<div class="col s12 m3">
+								<span class="product-info">
+									사이즈
+								</span>
+							</div>
+							<div class="col s12 m5">
+								<input type="text">
+							</div>
+							<div class="col s12 m4">
+							</div>
+						</div>
+						<div class="row nomargin">
+							<div class="col s12 m3">
+								<span class="product-info">
+									보증금
+								</span>
+							</div>
+							<div class="col s12 m4">
+								<input type="text">
+							</div>
+							<div class="col s12 m5">
+							</div>
+						</div>
+						<div class="row nomargin">
+							<div class="col s12 m3">
+								<span class="product-info">
+									대여료
+								</span>
+							</div>
+							<div class="col s12 m4">
+								<input type="text">
+							</div>
+							<div class="col s12 m5">
+							</div>
+						</div>
+						<div class="row nomargin">
+							<div class="col s12 m3">
+								<span class="product-info">
+									대여기간
+								</span>
+							</div>
+							<div class="col s12 m3">
+								<input type="text">
+							</div>
+							<div class="col s12 m1">
+								<span class="term-wave">~</span>
+							</div>
+							<div class="col s12 m3">
+								<input type="text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 m12">
+						<span class="cut-line">옷 설명글&nbsp;</span>
+						<div class="col s12 m12 cloth-Explanation-wrapper">
+							<textarea id="textarea1" class="cloth-Explanation"></textarea>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+{% block rightside %}
+
+<div class="col s12 l12 stuck-right">
+	<div class="card">
+		<div class="card-content ">
+			<div class="row ">
+				notification
+				<div class="divider"></div>
+				<br />
+				<div class="col s12 l3 no-padding">
+					<img src="{% static 'main/img/cloth1.jpg' %}" width="40px" class="circle responsive-img">
+				</div>
+				<div class="col s12 l9">
+
+					<a class = "event"> 
+						<!-- notice the "circle" class -->
+						<span class="lend-user">stealstick</span>님이 옷 공유를 요청하셨습니다.
+					</a>
+					<p class ="event-sub">11분전
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 l3 no-padding">
+					<img src="{% static 'main/img/cloth1.jpg' %}" width="40px" class="circle responsive-img">
+				</div>
+				<div class="col s12 l9">
+					<a class = "event"> 
+						<!-- notice the "circle" class -->
+						<span class="lend-user">stealstick</span>님이 옷 공유를 요청하셨습니다.
+					</a>
+					<p class ="event-sub">11분전
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-content">
+			<div class="row">
+				Rent item
+				<div class="divider"></div>
+			</div>
+			<div class="row">
+				<div class="col s12 l3 no-padding">
+					<img src="{% static 'main/img/cloth1.jpg' %}" width="40px" class="responsive-img">
+				</div>
+				<div class="col s12 l5">
+					<a class = "event"> 
+						<!-- notice the "circle" class -->
+						와이셔츠
+					</a>
+					<p class ="event-sub">stealstick
+					</p>
+				</div>
+				<div class="col s12 l4 like valign-wrapper center-align" >
+					<a class="valign center-align" > 
+						<!-- notice the "circle" class -->
+						return
+					</a>
+
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col s12 l3 no-padding">
+					<img src="{% static 'main/img/cloth1.jpg' %}" width="40px" class="responsive-img">
+				</div>
+				<div class="col s12 l5">
+					<a class = "event"> 
+						<!-- notice the "circle" class -->
+						와이셔츠
+					</a>
+					<p class ="event-sub">stealstick
+					</p>
+				</div>
+				<div class="col s12 l4 like valign-wrapper center-align" >
+					<a class="valign center-align" > 
+						<!-- notice the "circle" class -->
+						return
+					</a>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 l3 no-padding">
+					<img src="{% static 'main/img/cloth1.jpg' %}" width="40px" class="responsive-img">
+				</div>
+				<div class="col s12 l5">
+					<a class = "event"> 
+						<!-- notice the "circle" class -->
+						와이셔츠
+					</a>
+					<p class ="event-sub">stealstick
+					</p>
+				</div>
+				<div class="col s12 l4 like valign-wrapper center-align" >
+					<a class="valign center-align" > 
+						<!-- notice the "circle" class -->
+						return
+					</a>
+
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+</div>
+{% endblock %}
