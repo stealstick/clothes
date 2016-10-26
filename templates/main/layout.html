@@ -32,9 +32,14 @@
         <li><button type="submit" class="search-icon"><i class="material-icons search-icon">search</i></button></li>
       </ul>
 			<ul id="nav-mobile" class="right nav-account hide-on-med-and-down">
+            {% if request.user.is_authenticated %}
+            <li><a class = "red-text text-darken-2" href="/account/logout">LOGOUT</a></li>
+                <li><a class = "red-text text-darken-2" href="/account/login">MYPAGE</a></li>
+            {% else %}
 				<li><a class = "red-text text-darken-2" href="/account/signup">SIGNUP</a></li>
 				<li><a class = "red-text text-darken-2" href="/account/login">LOGIN</a></li>
 				<!--  <input type="text" name=""> -->
+                {% endif %}
 			</ul>
 		</div>
 	</nav>
