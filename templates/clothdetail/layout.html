@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
 	<link rel ="stylesheet" href="{% static 'main/css/base.css' %}" />
-	<link rel ="stylesheet" href="{% static 'clothupload/css/clothupload.css' %}" />
+	<link rel ="stylesheet" href="{% static 'clothdetail/css/clothdetail.css' %}" />
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
@@ -85,5 +85,6 @@
 			$('ul.tabs').tabs('select_tab', 'tab_id');
 		});
 	</script>
+	<script>  $('select').material_select('destroy');</script>
 </body>
 </html>
