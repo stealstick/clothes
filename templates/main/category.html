@@ -6,21 +6,10 @@
 {% load staticfiles %}
 
 <div class="row">
-    <div class="col s12 l12">
-        <div class="card">
-            <div class="card-image">
-                <img src="{% static 'main/img/logo.png' %}">
-            </div>
-            <div class="card-content">
-                <p>
-                </p>
-            </div>
-        </div>
-    </div>
     <div class="row">
         <div class="col s12 l12">
             <div class="col s12 l12">
-                <h5>신규 등록 상품</h5>
+                <h5>{{ category }}</h5>
                 <div class="divider"></div>
             </div>
         </div>
@@ -28,14 +17,14 @@
     <div class="row">
         <div class="col s12 l12">
             <div class="col s12 l12">
-                {% for cloth in clothes %}
+                {% for item in category_item %}
                 <div class="col s12 l4">
                     <div class="card">
                         <div class="card-image">
                             <img src="{% static 'main/img/cloth1.jpg' %}">
                         </div>
                         <div class="card-content">
-                            <p>{{ cloth.cloth_name }}</p>
+                            <p>{{ item.cloth_name }}</p>
                         </div>
 
                     </div>
