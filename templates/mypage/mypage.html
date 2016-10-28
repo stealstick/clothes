@@ -12,9 +12,9 @@
 <div class="row">
 	<div class="left-align col m8 offset-m4">
 		<span class="user-imfo">아이디</span>
-		<span class="user-imfo-text">sunrin</span><br>
+		<span class="user-imfo-text">{{ request.user.name }}</span><br>
 		<span class="user-imfo">주소 &nbsp;&nbsp;&nbsp;</span>
-		<span class="user-imfo-text">서울특별시 용산구</span>
+		<span class="user-imfo-text">{{ request.user.area }}</span>
 	</div>
 </div>
 <hr>
@@ -25,6 +25,8 @@
 			<div class="col s12 l12">
 				<span class="mycloth-text">내 옷 &nbsp;</span>
 			</div>
+
+			{% for cloth in my_cloth %}
 			<div class="col s12 l3">
 				<div class="card">
 					<div class="card-image">
@@ -32,77 +34,13 @@
 						<a href="#" class="card-image-x">X&nbsp; </a>
 					</div>
 					<div class="card-content card-content-myclothup">
-						<p>선린인터넷고 교복 치마</p>
+						<p>{{ cloth.cloth_name }}</p>
 
 					</div>
 
 				</div>
 			</div>
-			<div class="col s12 l3">
-				<div class="card">
-					<div class="card-image">
-						<img src="{% static 'main/img/cloth1.jpg' %}" class="card-image-img">
-						<a href="#" class="card-image-x">X&nbsp; </a>
-					</div>
-					<div class="card-content card-content-myclothup">
-						<p>선린인터넷고 교복 치마</p>
-						
-					</div>
-
-				</div>
-			</div>
-			<div class="col s12 l3">
-				<div class="card">
-					<div class="card-image">
-						<img src="{% static 'main/img/cloth1.jpg' %}" class="card-image-img">
-						<a href="#" class="card-image-x">X&nbsp; </a>
-					</div>
-					<div class="card-content card-content-myclothup">
-						<p>선린인터넷고 교복 치마</p>
-						
-					</div>
-
-				</div>
-			</div>
-			<div class="col s12 l3">
-				<div class="card">
-					<div class="card-image">
-						<img src="{% static 'main/img/cloth1.jpg' %}" class="card-image-img">
-						<a href="#" class="card-image-x">X&nbsp; </a>
-					</div>
-					<div class="card-content card-content-myclothup">
-						<p>선린인터넷고 교복 치마</p>
-						
-					</div>
-
-				</div>
-			</div>
-			<div class="col s12 l3">
-				<div class="card">
-					<div class="card-image">
-						<img src="{% static 'main/img/cloth1.jpg' %}" class="card-image-img">
-						<a href="#" class="card-image-x">X&nbsp; </a>
-					</div>
-					<div class="card-content card-content-myclothup">
-						<p>선린인터넷고 교복 치마</p>
-						
-					</div>
-
-				</div>
-			</div>
-			<div class="col s12 l3">
-				<div class="card">
-					<div class="card-image">
-						<img src="{% static 'main/img/cloth1.jpg' %}" class="card-image-img">
-						<a href="#" class="card-image-x">X&nbsp; </a>
-					</div>
-					<div class="card-content card-content-myclothup">
-						<p>선린인터넷고 교복 치마</p>
-
-					</div>
-
-				</div>
-			</div>
+			{% endfor %}
 			<div class="col s12 l3">
 				<div class="card card-plus valign-wrapper center-align">
 					

@@ -10,6 +10,7 @@ class Cloth(models.Model):
     lent_prize = models.IntegerField(default=1)
     cloth_img = models.CharField(max_length=40)
     cloth_intro = models.TextField()
+    cloth_about = models.TextField(null=True)
     owner = models.ForeignKey(User, related_name='owner_clother', null=True)
     lenter = models.ForeignKey(User, related_name='lenter_clother', null=True)
     def __str__(self):
