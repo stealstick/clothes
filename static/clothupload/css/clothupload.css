@@ -93,7 +93,9 @@ button:focus {
 .cloth-Explanation-wrapper{
 	margin-top:1%;
 }
-
+.cloth-intro{
+	height: 100px;
+}
 .cloth-Explanation{
 	height: 400px;
 }
