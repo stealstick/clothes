@@ -8,7 +8,7 @@ class Cloth(models.Model):
     category = models.CharField(max_length=20, null=True)
     bo_prize = models.IntegerField(default=1)
     lent_prize = models.IntegerField(default=1)
-    cloth_img = models.CharField(max_length=40)
+    cloth_img = models.ImageField(upload_to='cloth_image', default="cloth_image/default.png")
     cloth_intro = models.TextField()
     cloth_about = models.TextField(null=True)
     owner = models.ForeignKey(User, related_name='owner_clother', null=True)

@@ -1,7 +1,8 @@
 {% extends "clothupload/layout.html" %}
 {% load staticfiles %}
 {% block content %}
-
+<form action="/clothupload/upload/" method="post" enctype="multipart/form-data">
+{% csrf_token %}
 <div class="row clothupload-layout">
 	<div class="col s12 m12">
 		<span class="cut-line">옷 정보&nbsp;</span>
@@ -19,9 +20,8 @@
 							</div>
 
 						</div>
-						<input type="file" name="photo" id="photo" style="display: none;" >
+						<input type="file" name="cloth_img" id="photo" style="display: none;" >
 					</div>
-				
 				<div class="col s12 m8">
 					<div class="row nomargin">
 						<div class="col s12 m3">
@@ -30,7 +30,7 @@
 							</span>
 						</div>
 						<div class="col s12 m8">
-							<input type="text" id="product-name">
+							<input type="text" name="cloth_name" id="product-name">
 						</div>
 						<div class="col s12 m1">
 						</div>
@@ -42,7 +42,7 @@
 							</span>
 						</div>
 						<div class="col s12 m5">
-							<input type="text">
+							<input type="text" name="size">
 						</div>
 						<div class="col s12 m4">
 						</div>
@@ -54,7 +54,7 @@
 							</span>
 						</div>
 						<div class="col s12 m4">
-							<input type="text">
+							<input type="text" name="bo_prize">
 						</div>
 						<div class="col s12 m5">
 						</div>
@@ -66,7 +66,7 @@
 							</span>
 						</div>
 						<div class="col s12 m4">
-							<input type="text">
+							<input type="text" name="lent_prize">
 						</div>
 						<div class="col s12 m5">
 						</div>
@@ -74,11 +74,11 @@
 					<div class="row nomargin">
 						<div class="col s12 m3">
 							<span class="product-info">
-								대여기간
+								옷 종류
 							</span>
 						</div>
 						<div class="col s12 m4">
-                        <select class="browser-default">
+                        <select class="browser-default" name="category">
                            <option value="" disabled selected>Category</option>
                            <option value="1">아우터</option>
                            <option value="2">셔츠/블라우스</option>
@@ -99,7 +99,7 @@
 				<div class="col s12 m12">
 					<span class="cut-line">옷 소개&nbsp;</span>
 					<div class="col s12 m12 cloth-Explanation-wrapper">
-						<textarea id="textarea1" class="cloth-intro"></textarea>
+						<textarea id="textarea1" class="cloth-intro" name="cloth_intro"></textarea>
 					</div>
 				</div>					
 			</div>
@@ -107,14 +107,14 @@
 				<div class="col s12 m12">
 					<span class="cut-line">옷 상세 설명&nbsp;</span>
 					<div class="col s12 m12 cloth-Explanation-wrapper">
-						<textarea id="textarea1" class="cloth-Explanation"></textarea>
+						<textarea id="textarea1" class="cloth-Explanation" name="cloth_about"></textarea>
 					</div>
 				</div>					
 			</div>
 			<div class="row">
                <div class="col s12 m12">
                   <div class="col s12 m12">
-                     <button class="clothupload-confirm-btn">
+                     <button type = "submit" class="clothupload-confirm-btn">
                         Upload
                      </button>
                   </div>
@@ -125,6 +125,6 @@
 	</div>
 </div>
 </div>
-
+</form>
 {% endblock %}
 

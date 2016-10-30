@@ -14,6 +14,9 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.conf.urls.static import static
+from shopin import settings 
+
 
 urlpatterns = [
     url(r'^', include('main.urls')),
@@ -23,3 +26,4 @@ urlpatterns = [
     url(r'^clothupload/', include('clothupload.urls')),
     url(r'^clothdetail/', include('clothdetail.urls')),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
