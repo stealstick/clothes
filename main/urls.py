@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index),
+    url(r'^returnitem$', views.returnitem),
     url(r'^send/(?P<username>.+)$', views.send),
     url(r'^borrow/$', views.borrow),
     url(r'^sending/(?P<username>.+)$', views.sending),

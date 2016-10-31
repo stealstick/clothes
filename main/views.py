@@ -11,8 +11,10 @@ def index(request):
     except:
         rent = None;
         #send = None;
-
-    send = Send.objects.filter(resiver = request.user)
+    try :
+        send = Send.objects.filter(resiver = request.user)
+    except:
+        send =None;
     clothes = Cloth.objects.all()
 
     context = {'clothes': clothes,
@@ -51,7 +53,7 @@ def sending(request, username):
     send = Send(cloth=cloth, resiver=resiver,owner=request.user, text=text, update_date=date)
     send.save()
     
-    return render(request, 'main/main.html')
+    return render(request, 'main/sendfinish.html')
 
 def borrow(request):
     owner = request.GET['owner']
@@ -85,3 +87,10 @@ def search(request):
     'search_item' : search_item,
     }
     return render(request, 'main/search.html', context)
+
+def returnitem(request):
+    cloth_name= request.GET['cloth_name']
+    delete_item= Cloth.objects.get(lenter =request.user, cloth_name=cloth_name)
+    delete_item.lenter = None
+    delete_item.save()
+    return HttpResponseRedirect("/")

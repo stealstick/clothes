@@ -34,9 +34,10 @@
                         <img src="/media/{{ cloth.cloth_img }}" class="card-image-img">
                         <a href="#" class="card-image-x">X&nbsp; </a>
                     </div>
-                    <div class="card-content card-content-myclothup">
-                        <p>{{ cloth.cloth_name }}</p>
 
+                    <div class="card-content card-content-myclothup {% if cloth.lenter  %} grey {% endif %}">
+                        <p>{{ cloth.cloth_name }}</p>
+{% if cloth.lenter %} <p class="red-text">대여자 : {{ cloth.lenter }}</p> {% endif %}
                     </div>
 
                 </div>
