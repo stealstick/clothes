@@ -8,7 +8,8 @@
 			<div class="card-content">
 				<div class="row">
 					<div class="col s12 m5">
-						<div class="cloth-image-box">
+						<div >
+						<img src="/media/{{ cloth.cloth_img }}" class="cloth-image-box">
 						</div>
 					</div>
 					<div class="col s12 m1">
@@ -49,7 +50,7 @@
 							</div>
 						</div>
 						<div class="row">
-							<button class="communication" onClick="window.open('/send/{{ cloth.owner.name }}', '', 'width=400, height=270'); return false;">
+							<button class="communication" onClick="window.open('/send/{{ cloth.owner.name }}?item={{ cloth.cloth_name }}', '', 'width=400, height=270'); return false;">
 								판매자에게 연락하기
 							</button>
 						</div>
