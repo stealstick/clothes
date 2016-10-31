@@ -3,9 +3,20 @@ from django.http import HttpResponse
 from main.models import Cloth
 
 def index(request, cloth_name):
+    try :
+        rent = Cloth.objects.filter(lenter = request.user)
+        #send = Send.objects.filter(resiver = resiver.user)       
+    except:
+        rent = None;
+        #send = None;
+    try :
+        send = Send.objects.filter(resiver = request.user)
+    except:
+        send =None;
     cloth= Cloth.objects.get(cloth_name=cloth_name)
-    rent = Cloth.objects.filter(lenter = request.user) #Candidate의 area와 매개변수 area가 같은 객체만 불러오기
     context = {'cloth':cloth,
-    'rent' : rent}
+    'rent' : rent,
+    'send': send,
+    }
     return render(request, 'clothdetail/clothdetail.html', context)
 # Create your views here.
