@@ -35,16 +35,20 @@
  	<div style="width: 100%;  text-align: center;  display: inline-block;">
  		<div style="margin: 10px; background-color:#ece8e8;">
  			<div style="padding: 5px; font-size: 13px; ">	
- 				받는 사람: {{ username }}
+ 				받는 사람: {{ username }} 상품 :{{ cloth_name }}
  			</div>
  		</div>
+ 		<form method="post" action="/sending/{{ username }}?item={{ cloth_name }}">
+ 		{% csrf_token %}
  		<div style="margin:10px;">
- 		<textarea style="height: 150px; width: 100%; padding: 0; resize: none"></textarea>
+ 		<textarea style="height: 150px; width: 100%; padding: 0; resize: none" name="text"></textarea>
  		</div>
  	</div>
  	<div style="text-align: center; margin-top: 5px;">
  		<button class="btn sendmessage">보내기</button>
  		<button onclick="window.close();" class="btn closebtn">닫기</button>
+
  	</div>
+ 	</form>
  </body>
  </html>
