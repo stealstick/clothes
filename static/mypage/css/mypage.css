@@ -111,3 +111,11 @@
 	color: #e83b11 !important;
 	font-weight: bold;
 }
+.lent-button{
+	width: 100%;
+	height:100%;
+	background-color: rgb(252,0,62);
+}
+.lent-button:hover{
+	background-color: rgb(252,180,202);
+}
