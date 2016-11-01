@@ -9,7 +9,7 @@
     <div class="col s12 l12">
         <div class="card">
             <div class="card-image">
-                <img src="{% static 'main/img/intro.png' %}">
+                <img src="{% static 'main/img/intro.png' %}" class="waves-effect waves-light modal-trigger " href="#modal1">
             </div>
             
         </div>
@@ -42,4 +42,28 @@
         </div>
     </div>
 </div>
+  <a >SIGN IN</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="{% static 'main/img/intro.png' %}"> <!-- random image -->
+      </li>
+      <li>
+        <img src="{% static 'main/img/intro.png' %}"> <!-- random image -->
+      </li>
+      <li>
+        <img src="{% static 'main/img/intro.png' %}"> <!-- random image -->
+      </li>
+      <li>
+        <img src="{% static 'main/img/intro.png' %}"> <!-- random image -->
+      </li>
+    </ul>
+  </div>
+     </div>
+  </div>
+
 {% endblock %}

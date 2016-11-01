@@ -19,7 +19,7 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="{% static 'main/js/materialize.js' %}"></script>
 
 </head>
 
@@ -141,15 +141,18 @@
     </div>
 </div>
 </div>
+
 {% endif %}
                 </div>
             </div>
         </div>
         <!--Import jQuery before materialize.js-->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
+            <script src="{% static 'main/js/materialize.min.js' %}"></script>
         <script> $(document).ready(function(){
             $('ul.tabs').tabs('select_tab', 'tab_id');
+            $('.modal-trigger').leanModal();
+              $('.carousel.carousel-slider').carousel({full_width: true});
+              $('.slider').slider({full_width: true});
         });
 
     </script>
