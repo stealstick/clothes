@@ -19,7 +19,7 @@
             <div class="col s12 l12">
                 {% for item in category_item %}
                 <div class="col s12 l4">
-                    <div class="card">
+                <div class="card" onclick="location.href='/clothdetail/{{ item.cloth_name }}'">
                         <div class="card-image">
                             <img src="/media/{{ item.cloth_img }}">
                         </div>
