@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponse
 from .models import User
 import datetime
 
@@ -20,3 +20,7 @@ def useradd(request):
     useradd.set_password(password)
     useradd.save()
     return render(request, 'account/login.html')
+
+
+def logout(request):
+    return HttpResponseRedirect("/")

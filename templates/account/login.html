@@ -31,7 +31,26 @@
                                         {% if form.errors %}
 <p>ID나 비밀번호가 일치하지 않습니다.</p>
 {% endif %}
-						<button class="col l12 waves-effect waves-light btn-large login-button">LOGIN</button>
+						<button class="col l12 waves-effect waves-light btn-large login-button" OnClick="
+						if($('#icon_prefix').val()!='')
+						{
+							if($('#icon_telephone').val()!='')
+							{
+								return true;
+							}
+							else{
+
+								$('#icon_telephone').focus();
+							}
+
+						}
+						else{
+
+							$('#icon_prefix').focus();
+						}
+						return false;
+
+						">LOGIN</button>
 					</form>
 				</div>
 			</div>

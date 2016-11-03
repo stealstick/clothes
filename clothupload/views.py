@@ -1,9 +1,21 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from main.models import Cloth
+from mypage.models import Send
 def index(request):
-    rent = Cloth.objects.filter(lenter = request.user) #Candidate의 area와 매개변수 area가 같은 객체만 불러오기
-    context = {'rent' : rent}
+    try :
+        rent = Cloth.objects.filter(lenter = request.user)
+        #send = Send.objects.filter(resiver = resiver.user)       
+    except:
+        rent = None;
+        #send = None;
+    try :
+        send = Send.objects.filter(resiver = request.user)
+    except:
+        send =None;#Candidate의 area와 매개변수 area가 같은 객체만 불러오기
+    context = {'rent' : rent,
+    'my_send' : send,
+    }
     return render(request, 'clothupload/clothupload.html',context)
 
 def upload(request):

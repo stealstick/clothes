@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from main.models import Cloth
+from mypage.models import Send
 
 def index(request, cloth_name):
     try :
@@ -16,7 +17,7 @@ def index(request, cloth_name):
     cloth= Cloth.objects.get(cloth_name=cloth_name)
     context = {'cloth':cloth,
     'rent' : rent,
-    'send': send,
+    'my_send': send,
     }
     return render(request, 'clothdetail/clothdetail.html', context)
 # Create your views here.

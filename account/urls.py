@@ -14,9 +14,6 @@ urlpatterns = [
         r'^logout/',
         'django.contrib.auth.views.logout',
         name='logout',
-        kwargs={
-            'template_name': 'main/main.html'
-        }
     ),
     url(r'^signup/$', views.signup),
     url(r'^useradd$', views.useradd),   

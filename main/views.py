@@ -27,11 +27,18 @@ def category(request, category):
     category_item= Cloth.objects.filter(category=category)
 
     try :
-        rent = Cloth.objects.filter(lenter = request.user)        
+        rent = Cloth.objects.filter(lenter = request.user)
+        #send = Send.objects.filter(resiver = resiver.user)       
     except:
         rent = None;
+        #send = None;
+    try :
+        send = Send.objects.filter(resiver = request.user)
+    except:
+        send =None;
     context = {'category_item': category_item,
     'rent' : rent,
+    'my_send' : send,
     'category' : category}
 
     return render(request, 'main/category.html', context)
@@ -78,12 +85,19 @@ def search(request):
     search = request.GET['search']
     search_item=search
     try :
-        rent = Cloth.objects.filter(lenter = request.user)        
+        rent = Cloth.objects.filter(lenter = request.user)
+        #send = Send.objects.filter(resiver = resiver.user)       
     except:
         rent = None;
+        #send = None;
+    try :
+        send = Send.objects.filter(resiver = request.user)
+    except:
+        send =None;
     search = Cloth.objects.filter(cloth_name__contains=search)      
     context = {'search': search,
     'rent' : rent,
+    'my_send' : send,
     'search_item' : search_item,
     }
     return render(request, 'main/search.html', context)

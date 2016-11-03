@@ -9,7 +9,7 @@
 				<div class="row">
 					<div class="col s12 m5">
 						<div >
-						<img src="/media/{{ cloth.cloth_img }}" class="cloth-image-box">
+							<img src="/media/{{ cloth.cloth_img }}" class="cloth-image-box">
 						</div>
 					</div>
 					<div class="col s12 m1">
@@ -37,16 +37,14 @@
 							<div class="col s12 m4 nopadding seller-info">
 								<span class="seller-infotxt">
 									판매자 정보<br>
-									{{ cloth.owner.name }}
+									
 								</span>
 							</div>
 							<div class="col s12 m1 nopadding">
 							</div>
 							<div class="col s12 m3 nopadding average-grade">
-								<span class="average-title-gradetxt">평균 평점</span>
-								<span class="average-gradetxt">
-									5.0
-								</span>
+								<span class="cost">{{ cloth.owner.name }}</span>
+								
 							</div>
 						</div>
 						<div class="row">
@@ -59,19 +57,23 @@
 				<div class="row">
 					<div class="col s12 m12">
 						<h5>상세 설명</h5>
-                <div class="divider"></div>
+						<div class="divider"></div>
 					</div>
 
-				<div class="row">
-					<div class="col s12 m12">
-						<pre class="clothdetail-Explanation">
-{{ cloth.cloth_about }}
-						</pre>
+					<div class="row">
+						<div class="col s12 m12">
+							<pre class="clothdetail-Explanation">
+								{{ cloth.cloth_about }}
+							</pre>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
+</div>
 {% endblock %}
+
+
+
